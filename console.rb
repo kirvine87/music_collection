@@ -39,6 +39,14 @@ album2 = Album.new(
 album1.save()
 album2.save()
 
+album1.name = "Snippy Snappy"
+
+album1.update()
+
+artist1.name = "Rickstar"
+
+artist1.update()
+
 albums = Album.all()
 artists = Artist.all()
 
