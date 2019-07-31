@@ -2,6 +2,9 @@
 require_relative('./models/album.rb')
 require_relative('./models/artist.rb')
 
+Album.delete_all()
+Artist.delete_all()
+
 artist1 = Artist.new(
   {
     'name' => 'Ricky'
@@ -35,6 +38,9 @@ album2 = Album.new(
 
 album1.save()
 album2.save()
+
+albums = Album.all()
+artists = Artist.all()
 
 binding.pry
 

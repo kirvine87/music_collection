@@ -23,4 +23,15 @@
      @id = result[0]['id'].to_i()
    end
 
+   def Album.delete_all()
+     sql = "DELETE FROM albums"
+     SqlRunner.run(sql)
+   end
+
+   def self.all()
+     sql = "SELECT * FROM albums"
+     albums = SqlRunner.run(sql)
+     return albums.map{|album| Album.new(album)}
+   end
+
  end
