@@ -47,6 +47,9 @@ artist1.name = "Rickstar"
 
 artist1.update()
 
+# album1.delete()
+# artist1.delete()
+
 albums = Album.all()
 artists = Artist.all()
 

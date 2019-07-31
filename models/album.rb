@@ -50,4 +50,10 @@
      SqlRunner.run(sql, values)
    end
 
+   def delete()
+     sql = "DELETE FROM albums where id = $1"
+     value = [@id]
+     SqlRunner.run(sql, value)
+   end
+
  end
